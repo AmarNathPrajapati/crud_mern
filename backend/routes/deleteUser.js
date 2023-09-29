@@ -2,7 +2,6 @@ const express = require("express");
 const router  = express.Router()
 const User = require('../model/User');
 router.delete('/deleteuser/:id',async(req,res)=>{
-
     try {
         const id= req.params.id
         const data = await User.deleteOne({_id:id})
